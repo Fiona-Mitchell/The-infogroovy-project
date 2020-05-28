@@ -1,0 +1,95 @@
+body{
+  background: radial-gradient(circle, rgba(255,213,0,1) 0%, rgba(255,183,0,1) 100%);
+  margin: 0;
+}
+
+
+.eye{
+  background: radial-gradient(circle, rgba(255,255,255,1) 28%, rgba(245,244,241,1) 61%, rgba(217,216,211,1) 100%);
+  width: 200px;
+  height: 150px;
+  border-radius: 48%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -100px;
+  margin-top: -100px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fade 1s ease-in forwards;
+}
+
+.eye-before {
+  content: "";
+  position: absolute;
+  top: -150px;
+  left: -130%;
+  width: 200%;
+  z-index: 1;
+  border-radius: 90%;
+  height: 200%;
+  transition: all 0.75s;
+  animation: open 7s ease-in infinite;
+  border: solid 160px #ffb700;
+}
+
+.pupil{
+  background: radial-gradient(circle, rgba(94,128,121,1) 0%, rgba(60,91,98,1) 100%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -36px;
+  margin-top: -36px;
+}
+
+.black{
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.white{
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: relative;
+  left: 100%;
+  top: 20%;
+  margin-left: -20px;
+  margin-top: -20px;
+}
+
+.eye1{
+  margin-left: -225px;
+}
+
+.eye2{
+  margin-left: 25px;
+}
+
+@keyframes fade {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes open {
+  0% {top: 0;}
+  100% {bottom: 20px;}
+}
+
+@keyframes open {
+  0%, 45%{transform: translateY(0px);}
+  48%, 50% {transform: translateY(150px);}
+  55%, 100%{transform: translateY(0px);}
+
+}
